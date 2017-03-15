@@ -1,12 +1,12 @@
-$(function() {
+$(function () {
 
     //parallax
-    // $(".s-features").parallax({imageSrc: './img/bg2.jpg'});
+    $(".s-features").parallax({imageSrc: './img/bg2.jpg'});
 
     //EqualHeight
     $(".item-text").equalHeights();
 
-	//Magnific Popup
+    //Magnific Popup
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -15,7 +15,7 @@ $(function() {
         gallery: {
             enabled: true,
             navigateByImgClick: true,
-            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
             tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено.'
@@ -34,8 +34,8 @@ $(function() {
         $('.form-callback h4').text(dataText);
         $('.form-callback [name=admin-data]').val(dataForm);
     });
-	
-	    //E-mail Ajax Send
+
+    //E-mail Ajax Send
     $('form').submit(function () { //Change
         var th = $(this);
         $.ajax({
@@ -54,7 +54,7 @@ $(function() {
         return false;
     });
 
-		//Replace all SVG images with inline SVG
+    //Replace all SVG images with inline SVG
     $('img.img-svg').each(function () {
         var $img = $(this);
         var imgID = $img.attr('id');
@@ -81,5 +81,6 @@ $(function() {
             $img.replaceWith($svg);
         }, 'xml');
     });
-	
+
 });
+

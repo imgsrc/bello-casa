@@ -5,9 +5,9 @@
 @import settings
 
 .main-head
-  color: $white
+  color: $color
   position: relative
-  min-height: 90vh
+  min-height: 100vh
   background: $color url("../img/bg.jpg") no-repeat center top
   background-size: cover
   .top-line
@@ -24,19 +24,32 @@
         padding: 7px 20px
   .header-content
     padding-top: 10%
+    text-shadow: 0 5px 10px rgba($accent, .5)
+    color: $accent
     h1
       margin-bottom: 50px
 
 .s-about
-  &-item
+  p
+    font:
+      family: "OpenSansRegular", sans-serif
+      //style: italic
+      size: em(17px)
+    strong
+      color: $accent
+  .top-text
+    margin-bottom: 40px
+  .bottom-text
+    margin-top: 20px
+  .photo
     img
-      width: 150px
-      margin-bottom: 20px
+      border: 2px solid $accent
+      border-radius: 5px
 
 .s-features
   color: $white
   img
-    width: 150px
+    width: 120px
     margin-bottom: 20px
 
 .s-works
@@ -46,9 +59,22 @@
     margin-bottom: 10px
 
 .s-contacts
-  background-color: lighten($color, 20%)
+  background-color: lighten($color, 40%)
   color: $white
   padding-top: 60px
+
+.main-foot
+  padding: 20px 0 30px
+  background-color: darken($color, 10%)
+  color: rgba($white, .5)
+  p
+    font:
+      size: em(14px)
+      style: italic
+    a
+      color: rgba($white, .5)
+  h4
+    color: rgba($white, .6)
 
 .form
   display: block

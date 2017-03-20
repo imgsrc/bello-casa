@@ -1,5 +1,18 @@
 $(function () {
 
+    //Slick
+    $(".slick-bg").slick({
+        autoplay: true,
+        fade: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        respondTo: "header",
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+    });
+
     //parallax
     $(".s-features").parallax({imageSrc: './img/bg2.jpg'});
 

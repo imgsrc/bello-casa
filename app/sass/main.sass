@@ -14,16 +14,36 @@
   .top-line
     padding: 20px 0
     z-index: 10
+    .top-logo
+      display: inline-block
+      +media-xs(down)
+        text-align: center
     h3
       margin-top: 0
     .top-phone
       text-align: right
+      +media-xs(down)
+        text-align: center
+        padding: 20px 0
       p
         margin-top: 0
         font-family: "Exo2Bold", serif
         font-size: 20px
       .button
         padding: 7px 20px
+    .top-soc
+      margin-top: 15px
+      text-align: right
+      +media-xs(down)
+        text-align: center
+      .fa
+        font-size: 40px
+        margin-left: 15px
+        +mt(.5s)
+      a:hover
+        .fa
+          color: lighten($accent, 20%)
+
   .header-content
     padding-top: 20%
     text-shadow: 0 5px 10px rgba($accent, .5)
@@ -52,9 +72,12 @@
 
 .s-features
   color: $white
+  padding-bottom: 40px
   img
     width: 120px
     margin-bottom: 20px
+  .s-feat-item
+    margin-bottom: 40px
 
 .s-works
   .col-sm-3
@@ -131,6 +154,27 @@
       .img-svg
         path
           fill: $accent !important
+
+#YMapsID
+  border: 2px solid $accent
+
+.bottom-soc
+  margin: 20px 0 0 5px
+  +media-xs(down)
+    text-align: center
+  a
+    margin-right: 15px
+    &:hover, a:focus
+      .img-svg
+
+        path
+          fill: $white !important
+
+.main-foot
+  +media-xs(down)
+    text-align: center
+    .col-sm-6
+      margin-bottom: 20px
 
 .form.form-callback
   background-color: rgba($white, .1)
